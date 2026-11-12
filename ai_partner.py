@@ -95,7 +95,6 @@ system_prompt = """
     """
 #初始化聊天信息
 if "messages" not in st.session_state:
-    #Streamlit 官方早就想到了这个问题，解决办法是使用 st.session_state（会话状态）。你可以把它理解成一个跨越多次运行的“记忆背包”。
     st.session_state.messages = []
 #昵称
 if "nick_name" not in st.session_state:
@@ -203,10 +202,3 @@ if prompt: #字符串会自动转换为布尔值，非空字符串为True；空�
 
     #保存会话信息
     save_session()
-
-# Streamlit 的底层逻辑是：只要页面发生任何交互（比如你点了一下发送按钮），整个 Python 脚本就会从头到尾重新执行一遍。
-#
-# 如果你没有用一个“容器”把历史消息存起来，每次重新执行时，上一秒的对话就被彻底清空了。
-#
-# 🛠️ 怎么真正解决“覆盖”问题？
-# Streamlit 官方早就想到了这个问题，解决办法是使用 st.session_state（会话状态）。你可以把它理解成一个跨越多次运行的“记忆背包”。
