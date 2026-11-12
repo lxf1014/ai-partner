@@ -2,9 +2,6 @@
 
 基于 Streamlit 和 DeepSeek 大语言模型构建的可交互 AI 伴侣 Web 应用。项目实现了高度自定义的角色设定、流式对话输出以及多会话的持久化管理，为用户提供拟真、流畅的陪伴体验。
 
-## 🔗 在线体验
-👉 **[点击这里体验在线 Demo](<这里填你后续部署的 Streamlit 链接>)** 
-*(注：如遇网络问题，可在本地运行)*
 
 ## ✨ 核心功能
 
@@ -26,10 +23,11 @@
 
 1. **克隆仓库**
    ```bash
-   git clone <你的GitHub仓库链接>
-   cd <你的仓库名称>
+   git clone https://github.com/lxf1014/ai-partner
+   cd lxf1014/ai-partner
 
 2.**安装依赖**
+  
   本项目需要安装 streamlit 和 openai 库：
   ```bash
   pip install streamlit
@@ -37,6 +35,7 @@
   ```
 
 3.**配置 API Key**
+  
   本项目使用 DeepSeek 的 API。请确保你的系统环境中设置了对应的环境变量：
   ```bash
   Windows (CMD): set DEEPSEEK_API_KEY=你的API_KEY
@@ -44,16 +43,15 @@
   ```
 
 4.**启动应用**
+
 运行以下命令启动 Streamlit 应用：
 ```bash
 streamlit run ai_partner.py
 ```
 
-5.**📂 项目结构**
+##📂 项目结构##
 ```text
 ├── ai_partner.py    # 核心应用代码
-├── sessions/             # (自动生成) 用于存放聊天记录的 JSON 文件夹
-└── README.md             # 项目说明文档
+├── sessions/        # (自动生成) 用于存放聊天记录的 JSON 文件夹
+└── README.md        # 项目说明文档
 ```
-
-markdown
